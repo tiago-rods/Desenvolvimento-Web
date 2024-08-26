@@ -1,0 +1,132 @@
+<!DOCTYPE HMTL>
+<html lang = "pt-br">    
+    <head>
+        <title> Receita de cookie</title>
+        <meta name = "viewport" content = "widht=device-width, inicial scale = 1.0"
+        <meta charset="UTF-8">
+        <style>
+            .destacado {
+                color: blue;
+                font-weight: bold;
+            }
+            .container {
+                border: 1px solid black;
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1> Seja Bem-Vindo </h1>
+        <h2><p> Neste site você encontrará dados sobre como fazer um cookie</p>Esta é uma entrega do lab02</h2>
+        <h3><p> Aqui há uma lista de compras</p></h3>
+        <ul>
+            <li> 125 g de manteiga sem sal em temperatura ambiente </li>
+            <li> 1/2 xícara de açúcar mascavo</li>
+            <li> 1 e 3/4 de xícara de farinha de trigo </li>
+            <li> 300 g de chocolate meio amargo picado </li>
+            <li> 1/4 xícara de chocolate em pó</li>
+            <li> 3/4 xícara de açúcar</li>
+            <li> 1 ovo</li>
+            <li> 1 colher (chá) de fermento em pó</li>
+            <li> 1 colher (chá) de essência de baunilha</li>
+        </ul>
+        <h4> Modo de preparação</h4>
+        <ol>
+            <li> Misture a manteiga, açúcar mascavo, açúcar, essência de baunilha (e chocolate em pó, se for fazer cookies com base de chocolate)</li>
+            <li> Adicione o ovo batido aos poucos e misture bem.</li>
+            <li> Acrescente a farinha aos poucos e misture bem (pode ser na mão ou na batedeira planetária)</li>
+            <li> Por último, adicione o fermento e misture só para incorporá-lo à massa</li>
+            <li> Depois da massa bem misturada, adicione o chocolate picado</li>
+            <li> Forme bolinhas pequenas e asse em forno preaquecido, sobre papel manteiga, por aproximadamente 15 a 20 minutos (250° C)</li>
+
+        </ol>
+        <h5>Responda um formulario sobre suas opiniao sobre a receita</h5>
+        <form action = " / submit_satisfaction" method = " post">
+            <h4>Avalie a receita de cookies</h4>
+            <label for = "satisfaction"> Qual o seu nível de satisfação com a receita?</label><br><br>
+           
+            <input type ="radio"
+            id = "very satisfied"
+            name = "satisfaction"
+            value = "verySatisfied".>
+            <label for = "verySatisfied"> Muito Satisfeito</label><br>
+
+            <input type ="radio"
+            id = "satisfied"
+            name = "satisfaction"
+            value = "Satisfied".>
+            <label for = "Satisfied"> Satisfeito</label><br>
+            
+            <input type ="radio"
+            id = "neutral"
+            name = "satisfaction"
+            value = "neutral".>
+            <label for = "neutral"> Neutro </label><br>
+            
+            <input type ="radio"
+            id = "insatisfeito"
+            name = "satisfaction"
+            value = "insatisfeito".>
+            <label for = "insatisfeito"> Insatisfeito</label><br>
+
+        </form>
+        <form action="/enviar" method="post">
+            <label for="tempo"><h6>Selecione quanto tempop você demorou para fazer esta receita</h6></label>
+            <select id="tempo" name="tempo">
+                <option value="poucoTempo"> Menos de 30 minutos</option>
+                <option value="tempoMedio">de 45m a 1h</option>
+                <option value="neutro">1h a 1h30m</option>
+                <option value="muitoTempo">Mais de 1h30m</option>
+            </select>
+            <br><br>
+            <button type="submit">Enviar</button>
+            <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Digite seus comentários aqui..."></textarea>
+            <br><br>
+        </form>
+
+        <canvas id="canvas" width="200" height="200"></canvas>
+        <script>
+            var c = document.getElementById("canvas");
+            var ctx = c.getContext("2d");
+            var width = c.width;
+            var height = c.height;
+
+       
+            var partWidth = width / 2;
+            var partHeight = height / 2;
+
+
+            ctx.fillStyle = "#FF0000"; 
+            ctx.fillRect(0, 0, partWidth, partHeight); 
+
+            ctx.fillStyle = "#00FF00"; 
+            ctx.fillRect(partWidth, 0, partWidth, partHeight); 
+
+            ctx.fillStyle = "#0000FF"; 
+            ctx.fillRect(0, partHeight, partWidth, partHeight); 
+
+            ctx.fillStyle = "#FFFF00"; 
+            ctx.fillRect(partWidth, partHeight, partWidth, partHeight)
+  </script>
+        <div class="container">
+            <h2>Gráfico SVG</h2>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="magenta" stroke-width="10" fill="cyan" />
+            </svg>
+        </div>
+ 
+        <img src="https://cdn.wallpapersafari.com/82/63/63i7Fc.jpg" alt="Imagem de Exemplo" style="max-width: 30.5%; height: auto;">
+        <div><iframe width="560" height="315" src="https://www.youtube.com/embed/oIcIGpYUhzs?si=OC6hxOdewTEBxb0r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WZIGwN-5Ioo" frameborder="0" allowfullscreen></iframe>
+        <h2>Áudio de Exemplo</h2>
+        <audio controls>
+             <source src="https://cdn.pixabay.com/audio/2024/03/15/audio_3c299134d9.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+    </audio>
+
+    </body>
+
+</html>
