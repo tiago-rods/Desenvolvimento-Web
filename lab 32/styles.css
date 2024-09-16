@@ -1,0 +1,80 @@
+/* Reset básico para remover margens e padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container do quiz */
+#quiz-container {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Título do quiz */
+h1 {
+    color: #007BFF;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/* Estilos para as perguntas */
+#question-container div {
+    margin-bottom: 20px;
+}
+
+/* Estilos para as labels */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Estilos para os inputs de rádio */
+input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #007BFF;
+}
+
+/* Estilos para o botão */
+button {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o resultado */
+#result {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+    color: #007BFF;
+}
